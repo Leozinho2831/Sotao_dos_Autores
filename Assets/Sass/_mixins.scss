@@ -1,62 +1,20 @@
-@import '_header-capítulos';
-@import '_main-capítulos';
-@import '_footer-capítulos';
+@import '_váriaveis';
 
-// Variáveis
-
-$bg: #13131F;
-$bg-buttons: #212121;
-
-
-$borders: #8355EF;
-
-
-$nav: #7F50EA;
-
-
-$title: #E2DEEC;
-
-$text: #C6C6C6;
-
-
-$hover: #5005FF;
-
-
-// Light mode
-
-$bg-light: #F7EAEA;
-$bg-buttons-light: #EFA3A3;
-
-$borders-light: #CF1928;
-
-$nav-light: #DA1727;
-
-$title-light: #313131;
-$text-light: #6D6767;
-
-$hover-light: #E71526;
-
-// Fonts
-
-@font-face {
-    font-family: Quiche Display;
-    src: url(../Fonts/QuicheDisplay-Regular.ttf)
-    format(truetype);
-}
-
-@font-face {
-    font-family: Quiche Display Bold;
-    src: url(../Fonts/QuicheDisplay-Bold.ttf)
-    format(truetype);
-}
-
-// mixins
+// Mixins
 
 @mixin background($background){
     @if $background == dark{
         background-color: $bg;
     } @else if $background == light{
         background-color: $bg-light;
+    }
+}
+
+@mixin space($space){
+    @if $space == padding{
+        padding: 30px;
+    } @else if $space == margin{
+        margin: 30px;
     }
 }
 
@@ -116,20 +74,4 @@ $hover-light: #E71526;
             @content;
         }
     }
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: $bg;
-    transition: all 0.3s ease-in-out;
-}
-
-body.light{
-    background-color: $bg-light;
 }

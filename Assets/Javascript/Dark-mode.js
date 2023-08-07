@@ -9,6 +9,3 @@ function light(){
 
 const checkBoxMode = document.getElementById('mode');
 checkBoxMode.addEventListener('click', light);
-
-const checkBoxMobile = document.getElementById('mobile-mode');
-checkBoxMobile.addEventListener('click', light)

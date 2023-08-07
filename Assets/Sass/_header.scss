@@ -1,0 +1,61 @@
+@import '_váriaveis';
+@import '_mixins';
+
+.header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include background(dark);
+    @include space(padding);
+    border-bottom: 2px solid $borders;
+
+    figure{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img:nth-of-type(2){
+            display: none;
+        }
+    }
+
+    nav{
+        display: none;
+    }
+
+    .header__button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #checkbox{
+            display: none;
+            
+            &:checked + label .button__background{
+                background-image: url(../Images/Components/Moon.svg);
+            }
+        }
+
+        label{
+            width: 50px;
+            height: 50px;
+
+            background-color: $bg-buttons;
+            border-radius: 2px;
+
+            transition: transform 0.2s ease-in-out;
+
+            .button__background{
+                background-image: url(../Images/Components/Sun.svg);
+                background-size: 30px 30px;
+                background-repeat: no-repeat;
+                background-position: center center;
+
+                height: 100%;
+            }
+        }
+    }
+}
