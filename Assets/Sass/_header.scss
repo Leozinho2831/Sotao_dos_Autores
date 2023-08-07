@@ -7,29 +7,75 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include space(padding);
 
     @include background(dark);
-    @include space(padding);
     border-bottom: 2px solid $borders;
+
+    .light &{
+        @include background(light);
+        border-bottom: 2px solid $borders-light;
+    }
 
     figure{
         display: flex;
         align-items: center;
         justify-content: center;
 
-        img:nth-of-type(2){
+        a:nth-of-type(2){
             display: none;
+        }
+
+        .light & a:nth-of-type(1){
+            display: none;
+        }
+
+        .light & a:nth-of-type(2){
+            display: block;
+        }
+    }
+
+    .header__menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        gap: 10px;
+        margin: 0 40px 0 0;
+
+        @include responsive(tablet){
+            display: none;
+        }
+
+        div{
+            width: 30px;
+            height: 2px;
+
+            background-color: $borders;
+
+            .light &{
+                background: $borders-light;
+            }
+        }
+
+        div:nth-of-type(2){
+            width: 40px;
         }
     }
 
     nav{
         display: none;
+
+        @include responsive(tablet){
+            display: flex;
+            align-items: center;
+            gap: $space;
+        }
     }
 
     .header__button{
         display: flex;
-        align-items: center;
-        justify-content: center;
 
         #checkbox{
             display: none;
@@ -44,18 +90,68 @@
             height: 50px;
 
             background-color: $bg-buttons;
+            border: 1px solid $borders;
             border-radius: 2px;
 
             transition: transform 0.2s ease-in-out;
+            
+            .light &{
+                border: 1px solid $borders-light;
+            }
 
             .button__background{
-                background-image: url(../Images/Components/Sun.svg);
-                background-size: 30px 30px;
-                background-repeat: no-repeat;
-                background-position: center center;
+                background: {
+                    image: url(../Images/Components/Sun.svg);
+                    size: 30px 30px;
+                    repeat: no-repeat;
+                    position: center center;
+                }
 
                 height: 100%;
             }
+        }
+    }
+}
+
+.mobile__menu{
+    display: none;
+
+    &.view__menu {
+        display: block;
+    }
+
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        @include space(padding);
+        gap: $space;
+
+        border-bottom: 2px solid $borders;
+
+        .light &{
+            @include background(light);
+            border-bottom: 2px solid $borders-light;
+        } 
+    }
+
+
+    @include responsive(tablet){
+        display: none;
+    }
+
+    li{
+        font: {
+            size: 30px;
+            weight: 400;
+            family: Quiche Display;
+        }
+
+        text-align: center;
+        color: $nav;
+
+        .light &{
+            color: $nav-light;
         }
     }
 }

@@ -1,11 +1,11 @@
-function light(){
+function lightMode(){
     const body = document.querySelector('body');
-    if (body.classList('light')){
-        body.classList.remove('light');
+    if (body.classList.contains('light')){
+        body.classList.remove('light');       
     } else {
-        body.classList.add('light')
+        body.classList.add('light');
     }
 }
 
-const checkBoxMode = document.getElementById('mode');
-checkBoxMode.addEventListener('click', light);
+const mobileCheckbox = document.getElementById('ativar');
+mobileCheckbox.addEventListener('click', lightMode);

@@ -1,8 +1,8 @@
-function mobileMenu(){
-    let mobileMenu = document.querySelector('menu');
-    if (mobileMenu.classList.contains('view_menu')){
-        mobileMenu.classList.remove('view_menu');
+function mobileMenu() {
+    let menuMobile = document.querySelector('.mobile__menu');
+    if (menuMobile.classList.contains('view__menu')){
+        menuMobile.classList.remove('view__menu');
     } else {
-        menuMobile.classList.add('view_menu');
+        menuMobile.classList.add('view__menu');
     }
 }

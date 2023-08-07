@@ -2,19 +2,19 @@
 
 // Mixins
 
+@mixin space($space-items){
+    @if $space-items == padding{
+        padding: $space;
+    } @else if $space-items == margin{
+        margin: $space;
+    }
+}
+
 @mixin background($background){
     @if $background == dark{
         background-color: $bg;
     } @else if $background == light{
         background-color: $bg-light;
-    }
-}
-
-@mixin space($space){
-    @if $space == padding{
-        padding: 30px;
-    } @else if $space == margin{
-        margin: 30px;
     }
 }
 

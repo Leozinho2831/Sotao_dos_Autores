@@ -4,25 +4,64 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #13131F;
   padding: 30px;
+  background-color: #13131F;
   border-bottom: 2px solid #8355EF;
+}
+.light .header {
+  background-color: #F7EAEA;
+  border-bottom: 2px solid #CF1928;
 }
 .header figure {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.header figure img:nth-of-type(2) {
+.header figure a:nth-of-type(2) {
   display: none;
+}
+.light .header figure a:nth-of-type(1) {
+  display: none;
+}
+.light .header figure a:nth-of-type(2) {
+  display: block;
+}
+.header .header__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin: 0 40px 0 0;
+}
+@media (min-width: 750px) {
+  .header .header__menu {
+    display: none;
+  }
+}
+.header .header__menu div {
+  width: 30px;
+  height: 2px;
+  background-color: #8355EF;
+}
+.light .header .header__menu div {
+  background: #CF1928;
+}
+.header .header__menu div:nth-of-type(2) {
+  width: 40px;
 }
 .header nav {
   display: none;
 }
+@media (min-width: 750px) {
+  .header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
 .header .header__button {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .header .header__button #checkbox {
   display: none;
@@ -34,8 +73,12 @@
   width: 50px;
   height: 50px;
   background-color: #212121;
+  border: 1px solid #8355EF;
   border-radius: 2px;
   transition: transform 0.2s ease-in-out;
+}
+.light .header .header__button label {
+  border: 1px solid #CF1928;
 }
 .header .header__button label .button__background {
   background-image: url(../Images/Components/Sun.svg);
@@ -43,6 +86,40 @@
   background-repeat: no-repeat;
   background-position: center center;
   height: 100%;
+}
+
+.mobile__menu {
+  display: none;
+}
+.mobile__menu.view__menu {
+  display: block;
+}
+.mobile__menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 30px;
+  gap: 30px;
+  border-bottom: 2px solid #8355EF;
+}
+.light .mobile__menu ul {
+  background-color: #F7EAEA;
+  border-bottom: 2px solid #CF1928;
+}
+@media (min-width: 750px) {
+  .mobile__menu {
+    display: none;
+  }
+}
+.mobile__menu li {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: Quiche Display;
+  text-align: center;
+  color: #7F50EA;
+}
+.light .mobile__menu li {
+  color: #DA1727;
 }
 
 @font-face {
@@ -58,11 +135,12 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
   background-color: #13131F;
-  transition: all 0.3s ease-in-out;
 }
 
 body.light {

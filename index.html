@@ -12,36 +12,42 @@
 <body>
     <header class="header">
         <figure>
-            <img src="Assets/Images/Logo.png" alt="Logo">
-            <img src="Assets/Images/Logo Preta.png" alt="Logo">
+            <a href="index.html">
+                <img src="Assets/Images/Logo.png" alt="Logo">
+            </a>
+            <a href="index.html">
+                <img src="Assets/Images/Logo Preta.png" alt="Logo">
+            </a>
         </figure>
-        <menu onclick="mobileMenu()">
+        <div class="header__menu" onclick="mobileMenu()">
             <div></div>
             <div></div>
             <div></div>
-        </menu>
+        </div>
         <nav>
             <a href="index.html">
-                <h1>Home</h1>
+                Home
             </a>
             <a href="Assets/Pages/Contato-Autores.html">
-                <h1>Contato com os Autores</h1>
+                Contato com os Autores
             </a>
         </nav>
         <div class="header__button">
             <input type="checkbox" id="checkbox">
-            <label for="checkbox" id="mode">
+            <label for="checkbox" id="ativar">
                 <div class="button__background"></div>
             </label>
         </div>
     </header>
-    <nav class="menu">
-        <a href="index.html">
-            <h1>Home</h1>
-        </a>
-        <a href="Assets/Pages/Contato-Autores.html">
-            <h1>Contato com os Autores</h1>
-        </a>
+    <nav class="mobile__menu">
+        <ul>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="Assets/Pages/Contato-Autores.html">
+                <li>Contato com os Autores</li>
+            </a>
+        </ul>
     </nav>
     <main class="principal">
 
