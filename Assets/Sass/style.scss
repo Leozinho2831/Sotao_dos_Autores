@@ -130,6 +130,6 @@ body{
     transition: all 0.3s ease-in-out;
 }
 
-.light body{
+body.light{
     background-color: $bg-light;
 }
