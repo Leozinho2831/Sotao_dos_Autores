@@ -135,9 +135,11 @@
 .footer {
   background-color: #13131F;
   padding: 30px;
+  border-top: 2px solid #8355EF;
 }
 .light .footer {
   background-color: #F7EAEA;
+  border-top: 2px solid #CF1928;
 }
 .footer h1 {
   font-size: 25px;
