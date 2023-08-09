@@ -59,6 +59,16 @@
     align-items: center;
     gap: 30px;
   }
+  .header nav a {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: Quiche Display;
+    text-align: center;
+    color: #7F50EA;
+  }
+  .light .header nav a {
+    color: #DA1727;
+  }
 }
 .header .header__button {
   display: flex;
@@ -122,6 +132,152 @@
   color: #DA1727;
 }
 
+.principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.principal h1 {
+  font-family: Quiche Display;
+  font-weight: 400;
+  color: #E2DEEC;
+  font-size: 35px;
+  text-align: center;
+}
+.light .principal h1 {
+  font-family: Quiche Display;
+  font-weight: 400;
+  color: #313131;
+}
+.principal span {
+  font-family: Quiche Display Bold;
+  font-weight: 700;
+  color: #E2DEEC;
+  font-size: 35px;
+}
+.light .principal span {
+  font-family: Quiche Display Bold;
+  font-weight: 700;
+  color: #313131;
+}
+
+.principal__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+.principal__section div {
+  width: 250px;
+  height: 150px;
+  box-shadow: 2px 2px 4px #000000;
+  overflow: hidden;
+}
+@media (min-width: 540px) {
+  .principal__section div {
+    width: 500px;
+    height: 300px;
+  }
+}
+.principal__section div figure {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+.principal__section div figure img {
+  width: 250px;
+  height: 150px;
+}
+@media (min-width: 540px) {
+  .principal__section div figure img {
+    width: 600px;
+    height: 300px;
+  }
+}
+
+.principal__title h2 {
+  font-family: Quiche Display;
+  font-weight: 400;
+  color: #E2DEEC;
+  font-size: 30px;
+  margin: 30px 0;
+}
+.light .principal__title h2 {
+  font-family: Quiche Display;
+  font-weight: 400;
+  color: #313131;
+}
+.principal__title span {
+  font-family: Quiche Display;
+  font-weight: 400;
+  color: #E2DEEC;
+  font-size: 30px;
+}
+.light .principal__title span {
+  font-family: Quiche Display;
+  font-weight: 400;
+  color: #313131;
+}
+.principal__title hr {
+  height: 2px;
+  background-image: linear-gradient(to right, #13131F, #8355EF, #13131F);
+}
+.light .principal__title hr {
+  background-image: linear-gradient(to right, #F7EAEA, #CF1928, #F7EAEA);
+}
+
+.principal__books {
+  width: 80%;
+}
+.principal__books div {
+  width: 100%;
+}
+.principal__books div h3 {
+  font-family: Quiche Display;
+  font-weight: 400;
+  color: #E2DEEC;
+  font-size: 25px;
+  margin: 30px 0;
+}
+.light .principal__books div h3 {
+  font-family: Quiche Display;
+  font-weight: 400;
+  color: #313131;
+}
+.principal__books div figure {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  gap: 50px;
+}
+.principal__books div figure img {
+  max-width: 100%;
+  max-height: 400px;
+  min-width: 140px;
+  min-height: 250px;
+}
+
+.footer {
+  background-color: #13131F;
+  padding: 30px;
+}
+.light .footer {
+  background-color: #F7EAEA;
+}
+.footer h1 {
+  font-size: 25px;
+  font-font-weight: 300;
+  font-family: Quiche Display;
+  color: #E2DEEC;
+  text-align: center;
+}
+.light .footer h1 {
+  color: #313131;
+}
+
 @font-face {
   font-family: Quiche Display;
   src: url(../Fonts/QuicheDisplay-Regular.ttf) format(truetype);
@@ -137,6 +293,10 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

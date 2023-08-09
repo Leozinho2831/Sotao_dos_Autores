@@ -28,6 +28,10 @@
     list-style: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     @include background(dark);
 }

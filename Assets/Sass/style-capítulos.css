@@ -59,6 +59,16 @@
     align-items: center;
     gap: 30px;
   }
+  .header nav a {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: Quiche Display;
+    text-align: center;
+    color: #7F50EA;
+  }
+  .light .header nav a {
+    color: #DA1727;
+  }
 }
 .header .header__button {
   display: flex;
@@ -120,6 +130,24 @@
 }
 .light .mobile__menu li {
   color: #DA1727;
+}
+
+.footer {
+  background-color: #13131F;
+  padding: 30px;
+}
+.light .footer {
+  background-color: #F7EAEA;
+}
+.footer h1 {
+  font-size: 25px;
+  font-font-weight: 300;
+  font-family: Quiche Display;
+  color: #E2DEEC;
+  text-align: center;
+}
+.light .footer h1 {
+  color: #313131;
 }
 
 @font-face {

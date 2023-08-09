@@ -1,0 +1,26 @@
+@import '_váriaveis';
+@import '_mixins';
+
+.footer{
+    @include background(dark);
+    @include space(padding);
+
+    .light &{
+        @include background(light);
+    }
+
+    h1{
+        font: {
+            size: 25px;
+            font-weight: 300;
+            family: Quiche Display;
+        }
+
+        color: $title;
+        text-align: center;
+        
+        .light &{
+            color: $title-light;
+        }
+    }
+}

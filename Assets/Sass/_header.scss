@@ -71,6 +71,21 @@
             display: flex;
             align-items: center;
             gap: $space;
+
+            a{
+                font: {
+                    size: 30px;
+                    weight: 400;
+                    family: Quiche Display;
+                }
+        
+                text-align: center;
+                color: $nav;
+        
+                .light &{
+                    color: $nav-light;
+                }
+            }
         }
     }
 
