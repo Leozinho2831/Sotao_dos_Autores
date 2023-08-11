@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 40px;
   background-color: #13131F;
   border-bottom: 2px solid #8355EF;
 }
@@ -57,7 +57,7 @@
   .header nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
   }
   .header nav a {
     font-size: 30px;
@@ -108,8 +108,8 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 30px;
-  gap: 30px;
+  padding: 40px;
+  gap: 40px;
   border-bottom: 2px solid #8355EF;
 }
 .light .mobile__menu ul {
@@ -132,9 +132,33 @@
   color: #DA1727;
 }
 
+.chapter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.chapter img {
+  max-width: 100%;
+  max-height: 400px;
+  min-width: 250px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px #000000;
+}
+.light .chapter svg:nth-of-type(1) {
+  display: none;
+}
+.chapter svg:nth-of-type(2) {
+  display: none;
+}
+.light .chapter svg:nth-of-type(2) {
+  display: block;
+}
+
 .footer {
   background-color: #13131F;
-  padding: 30px;
+  padding: 40px;
   border-top: 2px solid #8355EF;
 }
 .light .footer {
@@ -143,7 +167,7 @@
 }
 .footer h1 {
   font-size: 25px;
-  font-font-weight: 300;
+  font-weight: 300;
   font-family: Quiche Display;
   color: #E2DEEC;
   text-align: center;
@@ -165,11 +189,12 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
   background-color: #13131F;
-  transition: all 0.3s ease-in-out;
 }
 
 body.light {

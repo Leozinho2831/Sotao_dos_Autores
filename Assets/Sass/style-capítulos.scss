@@ -19,16 +19,18 @@
     format(truetype);
 }
 
+    
 *{
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 body{
     @include background(dark);
-    transition: all 0.3s ease-in-out;
 }
 
 body.light{

@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 40px;
   background-color: #13131F;
   border-bottom: 2px solid #8355EF;
 }
@@ -57,7 +57,7 @@
   .header nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
   }
   .header nav a {
     font-size: 30px;
@@ -108,8 +108,8 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 30px;
-  gap: 30px;
+  padding: 40px;
+  gap: 40px;
   border-bottom: 2px solid #8355EF;
 }
 .light .mobile__menu ul {
@@ -137,13 +137,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  padding: 40px;
 }
 .principal h1 {
   font-family: Quiche Display;
   font-weight: 400;
   color: #E2DEEC;
-  font-size: 35px;
+  font-size: 40px;
   text-align: center;
 }
 .light .principal h1 {
@@ -167,7 +167,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px 0;
+  margin: 40px 0;
 }
 .principal__section div {
   width: 250px;
@@ -202,8 +202,8 @@
   font-family: Quiche Display;
   font-weight: 400;
   color: #E2DEEC;
-  font-size: 30px;
-  margin: 30px 0;
+  font-size: 35px;
+  margin: 40px 0;
 }
 .light .principal__title h2 {
   font-family: Quiche Display;
@@ -231,6 +231,7 @@
 
 .principal__books {
   width: 80%;
+  margin: 40px 0;
 }
 .principal__books div {
   width: 100%;
@@ -239,8 +240,8 @@
   font-family: Quiche Display;
   font-weight: 400;
   color: #E2DEEC;
-  font-size: 25px;
-  margin: 30px 0;
+  font-size: 30px;
+  margin: 0 0 15px 0;
 }
 .light .principal__books div h3 {
   font-family: Quiche Display;
@@ -256,13 +257,15 @@
 .principal__books div figure img {
   max-width: 100%;
   max-height: 400px;
-  min-width: 140px;
+  min-width: 180px;
   min-height: 250px;
+  border-radius: 15px 0;
+  box-shadow: 2px 2px 4px #000000;
 }
 
 .footer {
   background-color: #13131F;
-  padding: 30px;
+  padding: 40px;
   border-top: 2px solid #8355EF;
 }
 .light .footer {
@@ -271,7 +274,7 @@
 }
 .footer h1 {
   font-size: 25px;
-  font-font-weight: 300;
+  font-weight: 300;
   font-family: Quiche Display;
   color: #E2DEEC;
   text-align: center;
@@ -288,6 +291,19 @@
   font-family: Quiche Display Bold;
   src: url(../Fonts/QuicheDisplay-Bold.ttf) format(truetype);
 }
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #13131F;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #212121;
+  border-radius: 15px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -304,7 +320,6 @@ html {
 body {
   background-color: #13131F;
 }
-
 body.light {
   background-color: #F7EAEA;
 }/*# sourceMappingURL=style.css.map */

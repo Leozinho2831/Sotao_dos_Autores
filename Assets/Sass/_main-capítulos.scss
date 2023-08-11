@@ -1,2 +1,35 @@
 @import '_váriaveis';
 @import '_mixins';
+
+
+.chapter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include space(padding);
+
+    img{
+        max-width: 100%;
+        max-height: 400px;
+        min-width: 250px;
+
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px $preto;
+    }
+
+    svg:nth-of-type(1){
+
+        .light &{
+           display: none; 
+        }
+    }
+
+    svg:nth-of-type(2){
+        display: none;
+
+        .light &{
+            display: block;
+        }
+    }
+}

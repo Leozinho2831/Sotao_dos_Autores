@@ -76,7 +76,7 @@
     }
 }
 
-@mixin slide-responsive (){
+@mixin slide-responsive{
     @media (min-width: 540px){
         @content;
     }
