@@ -19,6 +19,20 @@
     format(truetype);
 }
 
+*::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+  }
+  
+::-webkit-scrollbar-track{
+    background-color: $bg;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: $borders;
+    border-radius: 15px;
+}
+
     
 *{
     margin: 0;

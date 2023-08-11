@@ -142,7 +142,7 @@
 .principal h1 {
   font-family: Quiche Display;
   font-weight: 400;
-  color: #E2DEEC;
+  color: #ded9eb;
   font-size: 40px;
   text-align: center;
 }
@@ -154,7 +154,7 @@
 .principal span {
   font-family: Quiche Display Bold;
   font-weight: 700;
-  color: #E2DEEC;
+  color: #ded9eb;
   font-size: 35px;
 }
 .light .principal span {
@@ -201,7 +201,7 @@
 .principal__title h2 {
   font-family: Quiche Display;
   font-weight: 400;
-  color: #E2DEEC;
+  color: #ded9eb;
   font-size: 35px;
   margin: 40px 0;
 }
@@ -213,7 +213,7 @@
 .principal__title span {
   font-family: Quiche Display;
   font-weight: 400;
-  color: #E2DEEC;
+  color: #ded9eb;
   font-size: 30px;
 }
 .light .principal__title span {
@@ -239,7 +239,7 @@
 .principal__books div h3 {
   font-family: Quiche Display;
   font-weight: 400;
-  color: #E2DEEC;
+  color: #ded9eb;
   font-size: 30px;
   margin: 0 0 15px 0;
 }
@@ -276,7 +276,7 @@
   font-size: 25px;
   font-weight: 300;
   font-family: Quiche Display;
-  color: #E2DEEC;
+  color: #ded9eb;
   text-align: center;
 }
 .light .footer h1 {
@@ -292,7 +292,8 @@
   src: url(../Fonts/QuicheDisplay-Bold.ttf) format(truetype);
 }
 *::-webkit-scrollbar {
-  width: 12px;
+  width: 15px;
+  height: 15px;
 }
 
 ::-webkit-scrollbar-track {
@@ -300,7 +301,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #212121;
+  background-color: #8355EF;
   border-radius: 15px;
 }
 

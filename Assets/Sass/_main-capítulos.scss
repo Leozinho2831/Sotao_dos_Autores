@@ -1,7 +1,6 @@
 @import '_váriaveis';
 @import '_mixins';
 
-
 .chapter{
     display: flex;
     flex-direction: column;
@@ -9,27 +8,228 @@
     justify-content: center;
     @include space(padding);
 
-    img{
-        max-width: 100%;
-        max-height: 400px;
-        min-width: 250px;
+    .chapter__aside{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 
-        border-radius: 10px;
-        box-shadow: 2px 2px 4px $preto;
+        @include responsive(mobile){
+            width: 100%;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            gap: $space;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include responsive(tablet){
+            width: 85%;
+        }
+
+        @include responsive(screen){
+            width: 60%;
+        }
+            
+        figure{
+            align-self: center;
+            justify-self: center;
+            margin: $space 0;
+
+            img{
+                width: 250px;
+                height: 400px;
+
+                border-radius: 10px;
+                box-shadow: 2px 2px 4px $preto;
+
+                cursor: pointer;
+                transition: transform 0.2s ease-in-out;
+
+                &:hover{
+                    transform: scale(1.05);
+                }
+
+                @include responsive(mobile){
+                    max-width: 100%;
+                }
+            }
+        }
     }
+}
 
-    svg:nth-of-type(1){
+.chapter__visit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-        .light &{
-           display: none; 
+    h1{
+        margin: 5px 0;
+
+        @include title(dark);
+        font-size: 24px;
+        text-align: center;
+
+           .light &{
+             @include title(light);
         }
     }
 
-    svg:nth-of-type(2){
-        display: none;
+     h2{
+        @include title(bold-dark);
+        font-size: 28px;
+        text-align: center;
 
         .light &{
-            display: block;
+            @include title(bold-light);
+        } 
+    }
+
+    button{
+        width: 120px;
+        height: 40px;
+        margin: 30px 0;
+
+        border: 1px solid $borders;
+        border-radius: 5px;
+        background-color: $bg-buttons;
+
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+        
+            
+        .light &{   
+            border: 1px solid $borders-light;
+            background-color: $bg-buttons-light;
+        }
+
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            p{
+                font: {
+                    size: 20px;
+                    weight: 500;
+                    family: 'Quicksand', sans-serif;
+                }
+
+            color: $borders;
+
+                .light &{
+                    color: $borders-light;
+                }
+            }
+
+            svg:nth-of-type(1){
+
+                .light &{
+                    display: none; 
+                }
+            }
+
+            svg:nth-of-type(2){
+
+                display: none;
+
+                .light &{
+                    display: block;
+                }
+            }
+        } 
+    }
+}
+
+.chapter__section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+
+    @include responsive(screen){
+        width: 60%;
+    }
+    
+    div{
+        width: 100%;
+    }
+    
+    @include responsive(mobile){
+        grid-column: span 2;
+    }
+
+    h1{
+        @include title(dark);
+
+        font-size: 40px;
+        text-align: center;
+
+        .light &{
+            @include title(light);
+        }
+    }
+
+    hr{
+        height: 2px;
+        margin: 15px 0;
+
+        background-image: linear-gradient(to right,
+            $bg, $borders, $bg);
+
+        .light &{
+            background-image: linear-gradient(to right,
+            $bg-light, $borders-light, $bg-light);
+        }
+    }
+}
+
+.section__content{
+    margin: $space 0;
+
+    border: 2px solid $borders;
+    border-bottom: none;
+    
+    .light &{
+        border: 2px solid $borders-light; 
+        border-bottom: none;
+    }
+
+    div {
+        @include space(padding);
+
+        border-bottom: 2px solid $borders;
+
+        .light &{
+            border-bottom: 2px solid $borders-light;
+        }
+
+        h2{
+            margin: 10px 0;
+
+            font-size: 30px;
+            @include title(dark);
+
+            .light &{
+                @include title(light);
+            }
+        }
+
+        h3{
+            margin: 10px 0;
+
+            @include text(dark);
+            font-size: 18px;
+
+            .light &{
+                @include text(light);
+            }
         }
     }
 }

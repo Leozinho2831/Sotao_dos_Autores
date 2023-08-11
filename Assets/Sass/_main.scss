@@ -43,8 +43,7 @@
 
         overflow: hidden;
         
-
-        @include slide-responsive{
+        @include responsive(mobile){
             width: 500px;
             height: 300px;
         }
@@ -59,7 +58,7 @@
                 width: 250px;
                 height: 150px;
         
-                @include slide-responsive{
+                @include responsive(mobile){
                     width: 600px;
                     height: 300px;
                 }
