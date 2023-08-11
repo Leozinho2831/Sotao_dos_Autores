@@ -68,7 +68,7 @@
         margin: 5px 0;
 
         @include title(dark);
-        font-size: 24px;
+        font-size: 35px;
         text-align: center;
 
            .light &{
@@ -78,7 +78,7 @@
 
      h2{
         @include title(bold-dark);
-        font-size: 28px;
+        font-size: 35px;
         text-align: center;
 
         .light &{
@@ -89,7 +89,7 @@
     button{
         width: 120px;
         height: 40px;
-        margin: 30px 0;
+        margin: 30px 0 0 0;
 
         border: 1px solid $borders;
         border-radius: 5px;
@@ -146,6 +146,85 @@
     }
 }
 
+.contact__title{
+    margin: $space 0 15px 0;
+    width: 50%;
+
+    h1{
+        @include title(dark);
+        font-size: 30px;
+
+        .light &{
+            @include title(light);
+        }
+    }
+    
+    hr{
+        height: 2px;
+        margin: 15px 0;
+
+        background-image: linear-gradient(to right,
+            $bg, $borders, $bg);
+
+        .light &{
+            background-image: linear-gradient(to right,
+            $bg-light, $borders-light, $bg-light);
+        }
+    }
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: $space;
+    margin: 0 0 $space 0;
+
+    div{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $bg-buttons;
+        border: 1px solid $borders;
+        border-radius: 100%;
+
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+
+        .light &{
+            background-color: $bg-buttons-light;
+            border: 1px solid $borders-light;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+            display: block;
+        }
+    
+        img:nth-of-type(2){
+            display: none;
+        }
+    
+        .light &{
+            img:nth-of-type(1){
+                display: none;
+            }
+        
+            img:nth-of-type(2){
+                display: block;
+            }
+        }
+    }     
+}
+
 .chapter__section{
     display: flex;
     flex-direction: column;
@@ -192,9 +271,10 @@
 
 .section__content{
     margin: $space 0;
-
     border: 2px solid $borders;
     border-bottom: none;
+
+    box-shadow: 2px 2px 4px $preto;
     
     .light &{
         border: 2px solid $borders-light; 
