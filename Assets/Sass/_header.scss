@@ -35,60 +35,6 @@
         }
     }
 
-    .header__menu{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-
-        gap: 10px;
-        margin: 0 40px 0 0;
-
-        @include responsive(tablet){
-            display: none;
-        }
-
-        div{
-            width: 30px;
-            height: 2px;
-
-            background-color: $borders;
-
-            .light &{
-                background: $borders-light;
-            }
-        }
-
-        div:nth-of-type(2){
-            width: 40px;
-        }
-    }
-
-    nav{
-        display: none;
-
-        @include responsive(tablet){
-            display: flex;
-            align-items: center;
-            gap: $space;
-
-            a{
-                font: {
-                    size: 30px;
-                    weight: 400;
-                    family: Quiche Display;
-                }
-        
-                text-align: center;
-                color: $nav;
-        
-                .light &{
-                    color: $nav-light;
-                }
-            }
-        }
-    }
-
     .header__button{
         display: flex;
 
@@ -124,49 +70,6 @@
 
                 height: 100%;
             }
-        }
-    }
-}
-
-.mobile__menu{
-    display: none;
-
-    &.view__menu {
-        display: block;
-    }
-
-    ul{
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        @include space(padding);
-        gap: $space;
-
-        border-bottom: 2px solid $borders;
-
-        .light &{
-            @include background(light);
-            border-bottom: 2px solid $borders-light;
-        } 
-    }
-
-
-    @include responsive(tablet){
-        display: none;
-    }
-
-    li{
-        font: {
-            size: 30px;
-            weight: 400;
-            family: Quiche Display;
-        }
-
-        text-align: center;
-        color: $nav;
-
-        .light &{
-            color: $nav-light;
         }
     }
 }
