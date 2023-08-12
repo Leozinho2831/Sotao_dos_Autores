@@ -17,10 +17,10 @@
   align-items: center;
   justify-content: center;
 }
-.header figure a:nth-of-type(2) {
+.light .header figure a:nth-of-type(1) {
   display: none;
 }
-.light .header figure a:nth-of-type(1) {
+.header figure a:nth-of-type(2) {
   display: none;
 }
 .light .header figure a:nth-of-type(2) {
@@ -39,12 +39,18 @@
   width: 50px;
   height: 50px;
   background-color: #212121;
-  border: 1px solid #8355EF;
+  border: 2px solid #8355EF;
   border-radius: 2px;
   transition: transform 0.2s ease-in-out;
 }
+.header .header__button label:hover {
+  border: 2px solid #5005FF;
+}
 .light .header .header__button label {
-  border: 1px solid #CF1928;
+  border: 2px solid #CF1928;
+}
+.light .header .header__button label:hover {
+  border: 2px solid #aa1221;
 }
 .header .header__button label .button__background {
   background-image: url(../Images/Components/Sun.svg);
@@ -144,18 +150,22 @@
   width: 120px;
   height: 40px;
   margin: 30px 0 0 0;
-  border: 1px solid #8355EF;
+  border: 2px solid #8355EF;
   border-radius: 5px;
   background-color: #212121;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 .chapter__visit button:hover {
+  border: 2px solid #5005FF;
   transform: scale(1.1);
 }
 .light .chapter__visit button {
-  border: 1px solid #CF1928;
+  border: 2px solid #CF1928;
   background-color: #EFA3A3;
+}
+.light .chapter__visit button:hover {
+  border: 2px solid #aa1221;
 }
 .chapter__visit button a {
   display: flex;
@@ -219,17 +229,21 @@
   align-items: center;
   justify-content: center;
   background-color: #212121;
-  border: 1px solid #8355EF;
+  border: 2px solid #8355EF;
   border-radius: 100%;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 .contact div:hover {
+  border: 2px solid #5005FF;
   transform: scale(1.1);
 }
 .light .contact div {
   background-color: #EFA3A3;
-  border: 1px solid #CF1928;
+  border: 2px solid #CF1928;
+}
+.light .contact div:hover {
+  border: 2px solid #aa1221;
 }
 .contact div img {
   width: 25px;
@@ -300,6 +314,7 @@
 .section__content div {
   padding: 40px;
   border-bottom: 2px solid #8355EF;
+  cursor: pointer;
 }
 .light .section__content div {
   border-bottom: 2px solid #CF1928;

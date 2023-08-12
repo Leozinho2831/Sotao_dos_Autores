@@ -91,7 +91,7 @@
         height: 40px;
         margin: 30px 0 0 0;
 
-        border: 1px solid $borders;
+        border: 2px solid $borders;
         border-radius: 5px;
         background-color: $bg-buttons;
 
@@ -99,13 +99,19 @@
         transition: transform 0.2s ease-in-out;
 
         &:hover{
+            border: 2px solid $hover;
+
             transform: scale(1.1);
         }
         
             
         .light &{   
-            border: 1px solid $borders-light;
+            border: 2px solid $borders-light;
             background-color: $bg-buttons-light;
+
+            &:hover{
+                border: 2px solid $hover-light;
+            }
         }
 
         a{
@@ -188,19 +194,25 @@
         justify-content: center;
 
         background-color: $bg-buttons;
-        border: 1px solid $borders;
+        border: 2px solid $borders;
         border-radius: 100%;
 
         cursor: pointer;
         transition: transform 0.2s ease-in-out;
 
         &:hover{
+            border: 2px solid $hover;
+
             transform: scale(1.1);
         }
 
         .light &{
             background-color: $bg-buttons-light;
-            border: 1px solid $borders-light;
+            border: 2px solid $borders-light;
+
+            &:hover{
+                border: 2px solid $hover-light;
+            }
         }
 
         img {
@@ -285,6 +297,8 @@
         @include space(padding);
 
         border-bottom: 2px solid $borders;
+
+        cursor: pointer;
 
         .light &{
             border-bottom: 2px solid $borders-light;

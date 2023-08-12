@@ -1,7 +1,8 @@
 const initialLinks = [
     'Assets/Pages/Capítulos-second-life.html',
     'Assets/Pages/Capítulos-Magnum.html',
-    'Assets/Pages/Capítulos-Imperfeito.html'
+    'Assets/Pages/Capítulos-Imperfeito.html',
+    'Assets/Pages/Capítulos-Destino.html'
 ];
 
 const imgContainer = document.getElementById("slide");
@@ -21,8 +22,13 @@ function slide() {
     }
 
     const windowWidth = window.innerWidth;
+    let responsiveOffset;
 
-    const responsiveOffset = 550 * (windowWidth <= 570 ? 0.453 : 0.98);
+    if (windowWidth < 560) {
+        responsiveOffset = 550 * 0.4542;
+    } else {
+        responsiveOffset = 550 * 0.98;
+    }
 
     imgContainer.style.transform = `translateX(${-nextIdx * responsiveOffset}px)`;
     isTransitionInProgress = true;
@@ -48,5 +54,4 @@ imgContainer.addEventListener('transitionend', () => {
     const link = document.getElementById("linkAnchor");
     link.href = initialLinks[idx];
 });
-
 
