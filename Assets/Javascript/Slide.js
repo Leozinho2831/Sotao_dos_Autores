@@ -25,9 +25,9 @@ function slide() {
     let responsiveOffset;
 
     if (windowWidth < 560) {
-        responsiveOffset = 550 * 0.4542;
+        responsiveOffset = 550 * 0.4544;
     } else {
-        responsiveOffset = 550 * 0.98;
+        responsiveOffset = 550 * 0.9901;
     }
 
     imgContainer.style.transform = `translateX(${-nextIdx * responsiveOffset}px)`;
