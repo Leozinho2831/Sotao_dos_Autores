@@ -35,40 +35,17 @@
     justify-content: center;
     margin: $space 0;
 
-    div{
-        width: 250px;
-        height: 150px;
+    .swiper{
+        width: 600px;
+        height: 300px;
 
-        box-shadow: 2px 2px 4px $preto;
-
-        overflow: hidden;
-        
-        @include responsive(mobile){
-            width: 500px;
-            height: 300px;
-        }
-        
-        figure{
-            display: flex;
-
-            transform: translateX(0);
-            transition: transform 0.5s ease-in-out;position: relative;
-
-            img{
-                width: 250px;
-                height: 150px;
-        
-                @include responsive(mobile){
-                    width: 600px;
-                    height: 300px;
-                }
-            }
+        img{
+            width: 100%;
         }
     }
 }
 
 .principal__title{
-
     h2{
         @include title(dark);
         font-size: 35px;

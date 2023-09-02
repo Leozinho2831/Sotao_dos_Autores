@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <title>Sotão dos Autores</title>
 </head>
 <body>
@@ -30,15 +32,30 @@
     <main class="principal">
         <h1><span>Bem-vindo</span> ao nosso sotão</h1>
         <section class="principal__section">
-            <div>
-                <a id="linkAnchor" href="">
-                    <figure id="slide">
-                        <img src="Assets/Images/Destaque second life.png" alt="Second Life">
-                        <img src="Assets/Images/Destaque Magnum, o prenúncio de ener.png" alt="Magnum: O Prenúncio de Ener">
-                        <img src="Assets/Images/O mundo imperfeito destaque.jpg" alt="O Mundo Imperfeito">
-                        <img src="Assets/Images/Crônicas do Destino destaque.jpg" alt="Crônicas do Destino">
-                    </figure>
-                </a>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="Assets/Pages/Capítulos-second-life.html">
+                            <img src="Assets/Images/Destaque second life.png" alt="Second Life"></div>
+                        </a>
+                    <div class="swiper-slide">
+                        <a href="Assets/Pages/Capítulos-Magnum.html">
+                            <img src="Assets/Images/Destaque Magnum, o prenúncio de ener.png" alt="Magnum: O Prenúncio de Ener">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="Assets/Pages/Capítulos-Destino.html">
+                            <img src="Assets/Images/Crônicas do Destino destaque.jpg" alt="Crônicas do Destino">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="Assets/Pages/Capítulos-Imperfeito.html">
+                            <img src="Assets/Images/O mundo imperfeito destaque.jpg" alt="O Mundo Imperfeito">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
         <div class="principal__title">
