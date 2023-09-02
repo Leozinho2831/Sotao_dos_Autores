@@ -99,7 +99,6 @@
         transition: transform 0.2s ease-in-out;
 
         &:hover{
-            border: 2px solid $hover;
 
             transform: scale(1.1);
         }
@@ -108,10 +107,6 @@
         .light &{   
             border: 2px solid $borders-light;
             background-color: $bg-buttons-light;
-
-            &:hover{
-                border: 2px solid $hover-light;
-            }
         }
 
         a{
@@ -179,7 +174,7 @@
     }
 }
 
-.contact{
+.contact__rede-social{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -202,18 +197,12 @@
         transition: transform 0.2s ease-in-out;
 
         &:hover{
-            border: 2px solid $hover;
-
             transform: scale(1.1);
         }
 
         .light &{
             background-color: $bg-buttons-light;
             border: 2px solid $borders-light;
-
-            &:hover{
-                border: 2px solid $hover-light;
-            }
         }
 
         img {

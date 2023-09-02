@@ -36,11 +36,22 @@
     margin: $space 0;
 
     .swiper{
-        width: 600px;
-        height: 300px;
+        width: 250px;
+        height: 150px;
+
+        @include responsive(mobile){
+            width: 450px;
+            height: 250px;
+        }
+
+        @include responsive(tablet){
+            width: 600px;
+            height: 300px;
+        }
 
         img{
             width: 100%;
+            height: 100%;
         }
     }
 }
@@ -50,7 +61,7 @@
         @include title(dark);
         font-size: 35px;
 
-        margin: $space 0;
+        margin: 25px 0 $space 0;
 
         .light &{
             @include title(light);

@@ -1,5 +1,6 @@
 @import '_header';
 @import '_main';
+@import 'main-capítulos';
 @import '_footer';
 
 @import '_mixins';
@@ -25,12 +26,30 @@
   }
   
 ::-webkit-scrollbar-track{
-    background-color: $bg;
+    background-color: transparent;
 }
   
 ::-webkit-scrollbar-thumb {
-    background-color: $borders;
-    border-radius: 15px;
+    background-color: $scrollbar-color;
+}
+
+.principal__books{
+    div{
+        figure{
+            &::-webkit-scrollbar{
+                width: 10px;
+                height: 10px;
+            }
+
+            &::-webkit-scrollbar-track{
+                background-color: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb{
+                background-color: $scrollbar-color;
+            }
+        }
+    }
 }
     
 *{
