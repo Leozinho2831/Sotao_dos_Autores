@@ -1,12 +1,3 @@
-// const initialLinks = [
-//     'Assets/Pages/Capítulos-second-life.html',
-//     'Assets/Pages/Capítulos-Magnum.html',
-//     'Assets/Pages/Capítulos-Imperfeito.html',
-//     'Assets/Pages/Capítulos-Destino.html'
-// ];
-
-// slide 3600ms
-
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
@@ -21,7 +12,7 @@ const swiper = new Swiper('.swiper', {
     },
 
     autoplay: {
-        delay: 2000,
+        delay: 3600,
         disableOnInteraction: false,
     },
 
